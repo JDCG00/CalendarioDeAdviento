@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+header{
+    background-color: #940C00;
+    height: 80px;
+}
+footer{
+    background-color: #940C00;
+    height: 60px;
+}
+main{
+    background-color: #00E064;
+    height: 650px;
+}
