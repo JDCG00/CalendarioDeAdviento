@@ -1,4 +1,4 @@
 window.onload = function() {
-    let myElement = document.getElementById("myDiv");
-    let mySparticles = new Sparticles(myElement, { count: 200 }, 400);
+    let container = document.querySelector(".particulas");
+    let mySparticles = new Sparticles(container, { count: 300 });
 }
