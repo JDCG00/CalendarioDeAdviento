@@ -45,8 +45,12 @@ footer{
   background-color: rgb(153, 0, 255);
   height: 80px;
 } 
-html { background: black; }
-body { background: transparent; }
+html{ 
+  background: black; 
+}
+body{ 
+  background: transparent;
+}
 .particulas {
   position: fixed;
   left: 0; right: 0;
