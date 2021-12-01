@@ -33,9 +33,12 @@
 	border: 0;
 }
 header{
+  position: fixed;
   border-radius: 0px 0px 100px 100px / 0px 0px 80px 80px;
   background-color: rgb(153, 0, 255);
   height: 80px;
+  width: 100%;
+  box-shadow: rgba(198, 182, 206, 0.664) 0px 20px 30px -10px;
 }
 main{
   height: 100vh;
@@ -59,7 +62,7 @@ body{
 }
 @supports ( pointer-events: none ) {
   .particulas {
-    z-index: 2;
+    z-index: -1;
     pointer-events: none;
   }
 }
