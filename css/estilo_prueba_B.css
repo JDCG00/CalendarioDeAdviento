@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+main{
+  height: 100vh;
+}
+
+html{ 
+  background: black; 
+}
+body{ 
+  background: transparent;
+}
+.particulas {
+  position: fixed;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  z-index: -1; 
+}
+@supports ( pointer-events: none ) {
+  .particulas {
+    z-index: -1;
+    pointer-events: none;
+  }
+}
