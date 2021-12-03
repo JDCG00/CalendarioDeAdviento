@@ -1,18 +1,30 @@
 *{
   margin: 0;
 	padding: 0;
-	border: 0;
+	border: 0;  
 }
-
+:root{
+  background: black;
+  scroll-behavior: smooth;
+}
 main{
-  height: 100vh;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-html{ 
-  background: black; 
-}
 body{ 
   background: transparent;
+}
+header{
+  border-bottom: 1px solid #c3d9ee ;
+}
+.contenedor-principal{  
+  border: 1px solid #c3d9ee;
+  height: 70vh;
+  width: 90vw;
+  border-radius: 20px;
 }
 .particulas {
   position: fixed;
@@ -25,4 +37,10 @@ body{
     z-index: -1;
     pointer-events: none;
   }
+}
+#imgCalendario{
+  width: 50%;
+  height: auto;
+  min-height: 300px;
+  border-radius: 20px;
 }

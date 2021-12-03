@@ -8,11 +8,14 @@
 main{
   height: 100vh;
 }
+header{
+  border-bottom: 1px solid #c3d9ee ;
+}
 footer{
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: rgb(153, 0, 255);
   height: 72px;
+  border-top: 1px solid #c3d9ee  ;
 } 
 html{ 
   background: black; 
@@ -47,7 +50,6 @@ body{
 }
 .d-flex {
   display: flex;
-  border-bottom: 1px solid #c3d9ee ;
 }
 
 
