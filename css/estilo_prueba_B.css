@@ -4,7 +4,6 @@
 	border: 0;  
 }
 :root{
-  background: black;
   scroll-behavior: smooth;
 }
 main{
@@ -15,8 +14,11 @@ main{
   justify-content: center;
 }
 
-body{ 
-  background: transparent;
+body{
+  background: url("../img/wallpaper2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 header{
   border-bottom: 1px solid #c3d9ee ;
