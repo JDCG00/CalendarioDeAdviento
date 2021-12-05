@@ -57,6 +57,12 @@ footer{
   top: 0; bottom: 0;
   z-index: -1;
 }
+@supports ( pointer-events: none ) {
+  .particulas {
+    z-index: -1;
+    pointer-events: none;
+  }
+}
 #imgCalendario{  
   position: inherit;
   z-index: -1;
