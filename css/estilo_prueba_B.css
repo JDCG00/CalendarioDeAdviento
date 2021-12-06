@@ -11,8 +11,7 @@ main{
   height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  
+  justify-content: space-around;  
 }
 
 body{
@@ -44,17 +43,19 @@ footer{
 }
 .bolas-navidad{
   padding: 10px;
-  border: 2px solid #c3d9ee;
-  height: 10vh;
-  width: 10vw;
+  border: 2px solid #c3d9ee;  
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
-  box-shadow: inset 0 0 9.5em 0 #0078b4, 0 0 10em 0 #004364;
+  background-color: rgba(0, 0, 0, 0.300);
 }
 #bola1{
   position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 0;
+  /*top: 18.3%;
+  left: 39.3%;
+  */
+  top: 126px;
+  left: 300px;
 }
 .contendor-multimedia{
   padding: 10px;
