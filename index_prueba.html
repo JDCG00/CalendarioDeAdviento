@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html  lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="css/estilo_prueba.css">
-      <link rel="icon" href="img/bola_de_nieve.png">
-      <title>Calendario de adviento</title>
-  </head>
-  <body>       
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        </ul>
-    </header>
-    <main></main>
-    <footer></footer>
-    
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo_prueba.css">
+        <link rel="icon" href="img/bola_de_nieve.png">
+        <title>Calendario de adviento</title>
+    </head>
+    <body>       
+        <header>
+            <ul class="nav nav-boton">    
+            <li class="nav-item"><a href="#" class="nav-link activado">Inicio</a></li>
+            <li class="nav-item"><a href="html/multimedia.html" class="nav-link">Multimedia</a></li>
+            <li class="nav-item"><a href="html/sobre_la_web.html" class="nav-link">Acerca de la web</a></li>
+            </ul>
+        </header>
+        <main>
+          <div class="contenedor-principal">
+            <div id="bola1" class="bolas-navidad"></div>
+            <img id="imgCalendario" src="img/calendario.jpg">
+          </div>
+        </main>
+        <footer>
+            <div id="div-nombre">
+              <span>© 2021 Juan Diego Carretero Granado</span>
+            </div>
+        </footer>       
 
-    <script src="js/particulas_nieve.js"></script>
-    <script src="sparticles-1.1.0/dist/sparticles.min.js"></script>
-  </body>
-  <div class="particulas"></div>
+        <script src="js/particulas_nieve_main.js"></script>
+        <script src="sparticles-1.1.0/dist/sparticles.min.js"></script>
+    </body>
+    <audio autoplay><source src="recursos/Jingle_Bells_Piano_Version.mp3"></audio>
+    <div class="particulas"></div>
 </html>
