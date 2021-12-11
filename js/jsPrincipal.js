@@ -11,6 +11,18 @@
 
 class Navidad{
 
+
+    constructor(){
+        window.onload = this.bind.iniciar(this)
+    }
+
+    iniciar(){
+
+    }
+
+    quitarAudio() {
+        let
+    }
 }
 class Vista{
     

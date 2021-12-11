@@ -153,11 +153,14 @@ a {
   filter: saturate(3);
   color: darkslategrey;
   box-shadow: 0px 0px 10px 0px #6fb6e9;
-  transition: color 0.7s ease-in-out,background-color 0.7s ease-in-out,border-color 0.7s ease-in-out;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: color 0.6s ease-in-out,background-color 0.6s ease-in-out,border-color 0.6s ease-in-out;
 }
 
 
 .nav-link:focus,.nav-link:hover{
   background-color: #00486c;
-  transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  transition: color 0.6s ease-in-out,background-color 0.6s ease-in-out,border-color 0.6s ease-in-out;
 }
