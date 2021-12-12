@@ -11,22 +11,29 @@
 
 class Navidad{
 
-
-    constructor(){
-        window.onload = this.bind.iniciar(this)
+    constructor(){        
+        this.Vista = new Vista()
+        this.Modelo = null
+        window.onload = this.iniciar.bind(this)
+        window.onclick = this.iniciar.bind(this)
     }
-
+    /**
+       Inicia
+    **/
     iniciar(){
-
+        console.log('ffsdsadas')
     }
 
-    quitarAudio() {
-        let
+    finalizarAudio() {
+        let audio = document.getElementById('audio')
+        audio.remove()
     }
 }
+
 class Vista{
     
 }
+
 class Modelo{
     
 }
