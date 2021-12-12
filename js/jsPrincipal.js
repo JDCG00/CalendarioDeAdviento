@@ -14,7 +14,7 @@ class Navidad{
     constructor(){        
         this.vista = null
         this.modelo = new Modelo()
-        window.onload = this.iniciar.bind(this)        
+        window.onload = this.iniciar.bind(this)       
     }
     /**
        Inicia
@@ -34,7 +34,7 @@ class Navidad{
 
 class Vista{
     constructor(){
-        this.particulas(this)
+       this.particulas()
     }
     particulas(){
         if (document.getElementById('detector')) {
