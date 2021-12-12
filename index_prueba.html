@@ -11,10 +11,8 @@
     <body>       
         <header>
             <div id="controladorAudio">
-              <img src="img/icono_play.png" alt="Activar música de fondo">
-              <img src="img/icono_pause.png" alt="Pausar música de fondo">
-              <img src="img/icono_stop.png" alt="Finalizar música de fondo">
-              <img src="img/icono_mute.png" alt="Silenciar música de fondo">
+              <img id="play" src="img/icono_play.png" alt="Activar música de fondo">
+              <img id="stop" src="img/icono_stop.png" alt="Finalizar música de fondo">
             </div>
             <ul class="nav nav-boton">    
             <li><a href="#" class="nav-link activado">Inicio</a></li>
@@ -34,9 +32,9 @@
             </div>
         </footer>
         <div id="detector"></div>
+        <audio id="audio" autoplay loop><source src="recursos/Jingle_Bells_Piano_Version.mp3"></audio>
+        <div class="particulas"></div>
         <script src="sparticles-1.1.0/dist/sparticles.min.js"></script>
         <script src="js/jsPrincipal.js"></script>
-    </body>
-    <audio id="audio" autoplay loop><source src="recursos/Jingle_Bells_Piano_Version.mp3"></audio>
-    <div class="particulas"></div>
+    </body>    
 </html>

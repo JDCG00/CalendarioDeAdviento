@@ -14,17 +14,18 @@ class Navidad{
     constructor(){        
         this.vista = null
         this.modelo = new Modelo()
-        window.onload = this.iniciar.bind(this)       
+        window.onload = this.iniciar.bind(this) 
     }
     /**
-       Inicia
+       Inicia el programa
     **/
     iniciar(){
         console.log('Cargado')
         this.vista = new Vista()
-        window.onclick = this.finalizarAudio.bind(this)
+        document.getElementById('stop').onclick = this.finalizarAudio.bind(this)
+        document.getElementById('play').onclick = this.vista.quitarParticulas.bind(this)
     }
-
+    
     finalizarAudio() {        
         let audio = document.getElementById('audio')
         if (audio) 
@@ -36,6 +37,14 @@ class Vista{
     constructor(){
        this.particulas()
     }
+
+    quitarParticulas(){
+        let particulas = document.querySelector(".particulas")
+        if (particulas) {
+            particulas.remove()
+        }
+    }
+    
     particulas(){
         if (document.getElementById('detector')) {
             let config_particulas = {
