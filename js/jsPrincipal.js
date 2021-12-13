@@ -23,7 +23,7 @@ class Navidad{
         console.log('Cargado')
         this.vista = new Vista()
         document.getElementById('stop').onclick = this.finalizarAudio.bind(this)
-        document.getElementById('play').onclick = this.vista.quitarParticulas.bind(this)
+        document.getElementById('play').onclick = this.vista.crearDiv.bind(this)
     }
     
     finalizarAudio() {        
@@ -36,6 +36,19 @@ class Navidad{
 class Vista{
     constructor(){
        this.particulas()
+    }
+
+    crearDiv(){
+       let divTarjeta = document.createElement('div')              
+       divTarjeta.classList.add('tarjeta')
+       function retraso(){
+            divTarjeta.style.opacity = 1
+            divTarjeta.style.transition = `opacity ${1}s`
+       }
+       setTimeout(retraso, 100)
+       
+       let main = document.getElementsByTagName('main')[0]
+       main.appendChild(divTarjeta)
     }
 
     quitarParticulas(){
