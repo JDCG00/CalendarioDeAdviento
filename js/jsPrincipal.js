@@ -14,7 +14,7 @@ class Navidad{
     constructor(){        
         this.vista = null
         this.modelo = new Modelo()
-        window.onload = this.iniciar.bind(this) 
+        window.onload = this.iniciar.bind(this)
     }
     /**
        Inicia el programa
@@ -24,6 +24,8 @@ class Navidad{
         this.vista = new Vista()
         document.getElementById('stop').onclick = this.finalizarAudio.bind(this)
         document.getElementById('play').onclick = this.vista.crearDiv.bind(this)
+        document.getElementsByClassName('contenedor-principal')[0].onclick = this.vista.verificar.bind(this.vista)
+        
     }
     
     finalizarAudio() {        
@@ -36,6 +38,23 @@ class Navidad{
 class Vista{
     constructor(){
        this.particulas()
+    }
+/*
+    crearBoton(){
+        console.log('hola');
+        let divBotones = document.createElement('div')
+        let contenedorMain = document.getElementsByClassName('contenedor-principal')[0]
+        divBotones.classList.add('bolas-navidad')
+        divBotones.style.top = `${184}px`
+        divBotones.style.left = `${684}px`
+        contenedorMain.appendChild(divBotones)
+
+    }
+*/
+    verificar(evento){
+        console.log(evento);
+        if (Math.abs(evento.clientX - 683) < 20 && Math.abs(evento.clientY - 243) < 20)
+            this.crearDiv()
     }
 
     crearDiv(){
@@ -128,7 +147,9 @@ class Vista{
 }
 
 class Modelo{
-    
+    constructor(){
+        
+    }
 }
 
 new Navidad()
