@@ -37,7 +37,8 @@ class Navidad{
 
 class Vista{
     constructor(){
-       this.particulas()
+       this.particulas() 
+       this.modelo = new Modelo()     
     }
 /*
     crearBoton(){
@@ -53,8 +54,10 @@ class Vista{
 */
     verificar(evento){
         console.log(evento);
-        if (Math.abs(evento.clientX - 683) < 20 && Math.abs(evento.clientY - 243) < 20)
-            this.crearDiv()
+        
+            if (Math.abs(evento.clientX - this.modelo.getCoordX()) < 20 && Math.abs(evento.clientY - this.modelo.getCoordY()) < 20)
+                this.crearDiv()      
+          
     }
 
     crearDiv(){
@@ -148,12 +151,20 @@ class Vista{
 
 class Modelo{
     constructor(){
-        this.generarDimensiones = []
+        this.coordX = [910 , 1010, 914, 1007, 860, 959, 1058, 846, 922, 996, 1072, 796, 861, 922, 959, 996, 1058, 1123,
+                        784, 831, 898, 959, 1022, 1087, 1135]
+        this.coordY = [275 , 275, 350, 350, 400, 400, 400, 491, 464, 464, 491, 559, 597, 549, 612, 549, 599, 556,
+                        661, 718, 665, 667, 659, 718, 731, 729]
     }
-    generarDimensiones(){
-        let dimensiones = [
-            
-        ]
+    getCoordX(){
+        for (let i = 0; i < 25; i++) {
+            return this.coordX[i]
+        }        
+    }
+    getCoordY(){
+        for (let i = 0; i < 25; i++) {
+            return this.coordY[i]
+        }
     }
 }
 
