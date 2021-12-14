@@ -148,7 +148,12 @@ class Vista{
 
 class Modelo{
     constructor(){
-        
+        this.generarDimensiones = []
+    }
+    generarDimensiones(){
+        let dimensiones = [
+            
+        ]
     }
 }
 
