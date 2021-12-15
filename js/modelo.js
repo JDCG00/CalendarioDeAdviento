@@ -14,8 +14,8 @@ export class Modelo{
         this.coordX = [334 , 433, 338, 433, 284, 383, 482, 270, 345, 421, 496, 219, 285, 345, 383, 418, 480, 545,
                         207, 254, 322, 382, 445, 511, 558]
 
-        this.coordY = [160 , 160, 236, 236, 282, 282, 282, 373, 345, 346, 374, 440, 480, 480, 432, 494, 434, 481, 441, 544,
-                        602, 551, 613, 549, 602, 543]
+        this.coordY = [160 , 160, 236, 236, 282, 282, 282, 373, 345, 346, 374, 440, 480, 432, 494, 434, 481, 441, 
+                        544, 602, 551, 613, 549, 602, 543]
         
         this.textoTarjeta = [
             'Tengo un sueño, un solo sueño, seguir soñando. Soñar con la libertad, soñar con la justicia, soñar con la igualdad y ojalá ya no tuviera necesidad de soñarlas.',

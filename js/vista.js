@@ -23,7 +23,8 @@ export class Vista{
         for (let i = 0; i < 25; i++) {
             if (Math.abs(evento.layerX - cogerCoordX[i]) < 25 && Math.abs(evento.layerY - cogerCoordY[i]) < 25){
                 this.crearDiv()
-                this.crearTextoTarjeta(console.log(this.modelo.getTextoTarjeta()[i])) 
+                this.crearTextoTarjeta(this.modelo.getTextoTarjeta()[i])
+                this.crearPestañaCerrar()
             }                          
         }        
     }
@@ -40,14 +41,22 @@ export class Vista{
        let main = document.getElementsByTagName('main')[0]
        main.appendChild(divTarjeta)
     }
-    crearTextoTarjeta(){
-        let cogerTexto = this.modelo = this.modelo.getTextoTarjeta()
+    crearPestañaCerrar(){
+        let divCerrar = document.createElement('div')
+        divCerrar.classList.add('pestañaCerrar')
+        let divTarjeta = document.getElementsByClassName('tarjeta')[0]
+        divTarjeta.appendChild(divCerrar)
+
+
+    }
+    crearTextoTarjeta(cogerTexto){
         let pTarjeta = document.createElement('p')
         pTarjeta.classList.add('pTarjeta')
         
         let divTarjeta = document.getElementsByClassName('tarjeta')[0]
         divTarjeta.appendChild(pTarjeta)
-        
+
+        pTarjeta.appendChild(document.createTextNode(cogerTexto))
     }
 
     quitarParticulas(){
