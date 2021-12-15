@@ -6,36 +6,9 @@
 */
 
 'use strict'
+import { Modelo } from "./modelo.js";
 
-
-
-class Navidad{
-
-    constructor(){        
-        this.vista = null
-        this.modelo = new Modelo()
-        window.onload = this.iniciar.bind(this)
-    }
-    /**
-       Inicia el programa
-    **/
-    iniciar(){
-        console.log('Cargado')
-        this.vista = new Vista()
-        document.getElementById('stop').onclick = this.finalizarAudio.bind(this)
-        document.getElementById('play').onclick = this.vista.crearDiv.bind(this)
-        document.getElementsByClassName('contenedor-principal')[0].onclick = this.vista.verificar.bind(this.vista)
-        document.getElementsByTagName('body')[0].onclick = this.vista.testEvento.bind(this.vista)
-    }
-    
-    finalizarAudio() {        
-        let audio = document.getElementById('audio')
-        if (audio) 
-            audio.remove()   
-    }
-}
-
-class Vista{
+export class Vista{
     constructor(){
        this.particulas() 
        this.modelo = new Modelo()     
@@ -50,11 +23,9 @@ class Vista{
         for (let i = 0; i < 25; i++) {
             if (Math.abs(evento.layerX - cogerCoordX[i]) < 25 && Math.abs(evento.layerY - cogerCoordY[i]) < 25){
                 this.crearDiv()
-
+                this.crearTextoTarjeta(console.log(this.modelo.getTextoTarjeta()[i])) 
             }                          
-        }
-                 
-          
+        }        
     }
 
     crearDiv(){
@@ -70,8 +41,13 @@ class Vista{
        main.appendChild(divTarjeta)
     }
     crearTextoTarjeta(){
+        let cogerTexto = this.modelo = this.modelo.getTextoTarjeta()
         let pTarjeta = document.createElement('p')
         pTarjeta.classList.add('pTarjeta')
+        
+        let divTarjeta = document.getElementsByClassName('tarjeta')[0]
+        divTarjeta.appendChild(pTarjeta)
+        
     }
 
     quitarParticulas(){
@@ -149,36 +125,3 @@ class Vista{
         }        
     }
 }
-
-class Modelo{
-    constructor(){
-
-        this.coordX = [334 , 433, 338, 433, 284, 383, 482, 270, 345, 421, 496, 219, 285, 345, 383, 418, 480, 545,
-                        207, 254, 322, 382, 445, 511, 558]
-
-        this.coordY = [160 , 160, 236, 236, 282, 282, 282, 373, 345, 346, 374, 440, 480, 480, 432, 494, 434, 481, 441, 544,
-                        602, 551, 613, 549, 602, 543]
-        
-        this.textoTarjeta = [
-            'Tengo un sueño, un solo sueño, seguir soñando. Soñar con la libertad, soñar con la justicia, soñar con la igualdad y ojalá ya no tuviera necesidad de soñarlas.',
-            'Mi partido es la justicia social; mi bandera la igualdad y tengo como única meta la felicidad de todos.',
-            'Tu verdad aumentará en la medida que sepas escuchar la verdad de los otros.',
-            'La no violencia es un arma poderosa y justa que corta sin herir y ennoblece al hombre que lo maneja. Es una espada que cura.',
-            'La paz es más preciosa que los diamantes o plata u oro.',
-            'La paz es más preciosa que los diamantes o plata u oro.',
-            'No habrá paz en el mundo mientras no exista justicia social para los trabajadores.',
-            'La justicia social no puede ser conseguida por la violencia. La violencia mata lo que intenta crear.'
-        ]
-    }
-    getTextoTarjeta(){
-        return this.textoTarjeta
-    }
-    getCoordX(){
-        return this.coordX
-    }
-    getCoordY(){        
-        return this.coordY
-    }
-}
-
-new Navidad()

@@ -56,6 +56,10 @@ body{
   border: 2px solid #c3d9ee;
   height: 75vh;
   width: 40vw;
+  /*
+  height: 695.25px;
+  width: 768px;
+  */
   border-radius: 20px;
   box-shadow: inset 0 0 9.5em 0 #0078b4, 0 0 10em 0 #004364;
 }
@@ -194,4 +198,8 @@ ol, ul {
   border-radius: 20px;
   box-shadow: inset 0 0 9.5em 0 #0078b4, 0 0 10em 0 #004364;
   opacity: 0;
+}
+.pTarjeta{
+  color: white;
+  font-weight: bolder;
 }
