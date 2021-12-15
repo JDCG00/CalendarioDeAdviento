@@ -178,14 +178,17 @@ ol, ul {
   position: absolute;
   display: flex;
   flex-direction: column;
-  border: 2px solid #c3d9ee;
+  border: 2px solid #c3d9ee;  
+  background: #158bca57;
   height: 620px;
   width: 480px;
   border-radius: 20px;
-  box-shadow: inset 0 0 9.5em 0 #0078b4, 0 0 10em 0 #004364;
+  box-shadow: inset 0 0 20px 0px #0078b4, 0 0 20px 0 #004364;
   opacity: 0;
+  pointer-events: none;
 }
 .pTarjeta{
+  text-align: justify;
   position: relative;
   top: 70px;
   color: white;
@@ -198,10 +201,18 @@ ol, ul {
   position: absolute;
   z-index: 1;
   padding: 10px;   
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  border: 2px solid #c3d9ee; 
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid red; 
+  border-width: 0px 0px 2px 2px;
+  box-shadow: -2px 2px 5px -1px red;
   top: 0;
   right: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.pestañaCerrar:hover{
+  filter: invert(1);  
+  cursor: pointer;
 }
